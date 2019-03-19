@@ -12,9 +12,16 @@ if(filter_input(INPUT_GET, "aluno") &&
    $n2 = filter_input(INPUT_GET, "n2");
    $n3 = filter_input(INPUT_GET, "n3");
    $n4 = filter_input(INPUT_GET, "n4");
-   echo"aluno=".$aluno;
-   echo "<br>ano=".$ano;
-   echo "<br>n1=".$n1;	
+   echo"<fieldset>Aluno = " . $aluno;
+   echo "<br>ano = " . $ano;
+   echo "<br>n1=".$n1;
+   echo "<br>n2=".$n2;
+   echo "<br>n3=".$n3;
+   echo "<br>n4=".$n4;
+    
+    $media = ($n1 + $n2 + $n3 + $n4)/4;
+    echo "<br>Média = " . $media;
+    
    echo"<?fieldset>";
 	}else{
 		echo "Campos não preenchidos!!!";
