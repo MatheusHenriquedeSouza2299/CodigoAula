@@ -18,9 +18,13 @@ if(filter_input(INPUT_GET, "aluno") &&
    echo "<br>n2=".$n2;
    echo "<br>n3=".$n3;
    echo "<br>n4=".$n4;
-    
-    $media = ($n1 + $n2 + $n3 + $n4)/4;
-    echo "<br>Média = " . $media;
+	$media = ($n1 + $n2 + $n3 + $n4)/4;
+    if ($media>=6) {
+    echo "<p class=aprovado>Parabéns " . $aluno . ", voce foi aprovado com média = " . $media . "</p>";
+    }
+    else {
+    echo "<p class=reprovado>Poxa vida " . $aluno .", voce foi reprovado com media = " . $media  . "</p>";
+}
     
    echo"<?fieldset>";
 	}else{
